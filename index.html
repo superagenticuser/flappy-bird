@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Flappy Wings — a tiny web-based Flappy Bird clone. Tap, click, or press Space to flap through the pipes." />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Flappy Wings</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="game-wrap" id="gameWrap">
+    <canvas id="game" width="420" height="640"></canvas>
+
+    <button class="icon-btn sound-btn" id="soundBtn" aria-label="Toggle sound">🔊</button>
+
+    <!-- Start panel -->
+    <div class="overlay" id="startPanel">
+      <div class="panel-card">
+        <p class="panel-kicker">A tiny flappy clone</p>
+        <h1 class="panel-title">Flappy<br />Wings</h1>
+        <div class="panel-bird" aria-hidden="true">🐤</div>
+        <p class="panel-hint">Tap, click, or press <kbd>Space</kbd> to flap.<br />Dodge the pipes. Don't touch the ground.</p>
+        <p class="panel-best">Best score: <strong id="bestStart">0</strong></p>
+        <button class="big-btn" id="playBtn">▶&nbsp; Play</button>
+      </div>
+    </div>
+
+    <!-- Game over panel -->
+    <div class="overlay hidden" id="overPanel">
+      <div class="panel-card">
+        <p class="panel-kicker">Game over</p>
+        <h1 class="panel-title small">Score: <span id="finalScore">0</span></h1>
+        <div class="medal" id="medal" aria-hidden="true"></div>
+        <p class="new-best hidden" id="newBest">🎉 New best!</p>
+        <p class="panel-best">Best score: <strong id="finalBest">0</strong></p>
+        <button class="big-btn" id="restartBtn">↻&nbsp; Play again</button>
+      </div>
+    </div>
+  </div>
+  <p class="credit">Built with plain HTML, CSS &amp; JavaScript — no libraries.</p>
+
+  <script src="game.js"></script>
+</body>
+</html>

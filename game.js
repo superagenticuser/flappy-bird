@@ -67,7 +67,7 @@
       g.connect(a.destination);
       o.start(t);
       o.stop(t + dur + 0.02);
-    } catch (e) { /* audio unavailable — stay silent */ }
+    } catch (e) { /* audio unavailable - stay silent */ }
   }
 
   const sfx = {
@@ -439,7 +439,7 @@
       bird.vy = FLAP;
       sfx.flap();
     }
-    // in 'over' state taps do nothing — use the restart button
+    // in 'over' state taps do nothing - use the restart button
   }
 
   wrap.addEventListener('pointerdown', press);
